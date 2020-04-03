@@ -1,0 +1,8 @@
+.container-fluid {
+    margin-top: 5%;
+}
+
+.carousel-item > img {
+    height: 400px;
+    object-fit: contain;
+} 

@@ -1,0 +1,29 @@
+@media(min-width: 768px){
+    .recipe-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .home-container {
+        margin-right: 4%;
+    }
+
+    .hungry-title {
+        padding-left: 9%;
+    }
+}
+
+@media(min-width: 1080px){
+    .recipe-list {
+        margin-left: 2%;
+    }
+
+    .home-container {
+        margin-left: 6%;
+    }
+
+    .hungry-title {
+        padding-left: 11%;
+    }
+}

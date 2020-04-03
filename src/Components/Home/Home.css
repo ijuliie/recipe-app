@@ -1,0 +1,17 @@
+.home-card {
+    margin: 10% 0 0 17%;
+    box-shadow: 4px 7px 26px -1px rgba(0,0,0,0.64);
+    border: none;
+  }  
+
+.row {
+  margin-right: 15px;
+}
+
+.hungry-title {
+  margin: 5% 0 0 34%;
+}
+
+.home-container {
+  margin-bottom: 50px;
+}
