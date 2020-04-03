@@ -12,7 +12,7 @@ function App() {
       <Switch>
         <Route exact path="/recipe-app" component={ Home } />
         <Route path="/search" component={ Search } />
-        <Redirect from="/" to="recipe-app" />
+        <Redirect from="/" to="/recipe-app" />
       </Switch>
     </div>
   )
