@@ -8,7 +8,6 @@ export default function Home() {
     const [search, setSearch] = useState("")
   
     useEffect(() => {
-      console.log("App - useEffect: useEffect")
       const callApi = async () => {
         const apiKey = `4ff13b14bc14e2d5451fba71d252f5fc`
         const appId = `bd9d80c8` 
@@ -16,7 +15,6 @@ export default function Home() {
         const res = await fetch(recipeUrl)
         const json = await res.json()
         setRecipes(json)
-        console.log(json)
       }
       callApi()
     }, [search])
