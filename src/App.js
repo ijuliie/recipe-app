@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/recipe-app/" component={ Home } />
+        <Route exact path="/" component={ Home } />
         <Route path="/search" component={ Search } />
       </Switch>
     </div>
