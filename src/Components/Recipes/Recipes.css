@@ -1,13 +1,10 @@
 .recipe-search {
-<<<<<<< HEAD
     margin: 0 0 5% 10%;
     border: none;
     box-shadow: 4px 7px 26px -1px rgba(0,0,0,0.64);
     width: 21rem;
-=======
     margin-left: 15%;
     margin-bottom: 5%;
     border: none;
     box-shadow: 4px 7px 26px -1px rgba(0,0,0,0.64);
->>>>>>> 4bca6c67de9c99cd62eb5949b0e94f7345c9a7dd
 }
