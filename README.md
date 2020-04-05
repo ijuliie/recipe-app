@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Recipes
 
 https://ijuliie.github.io/recipe-app/

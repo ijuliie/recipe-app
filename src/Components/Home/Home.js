@@ -17,7 +17,7 @@ export default function Favorites(){
                 <Row>
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                             <Card.Link target="_blank" href="https://www.edamam.com/recipe/the-pastrami-burger-bomb-recipe-2e5525c72aafe44276ec904bee2f9596/burger">
                                 <Card.Img variant="top" src="https://www.edamam.com/web-img/77d/77d71d0e0deec9db51434fe1effba84d.jpg" alt="pastrami burger"/>
                             </Card.Link>
@@ -40,7 +40,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="_blank" href="http://www.edamam.com/recipe/pizza-margherita-tomato-basil-and-mozzarella-pizza-45d4aa853235b7c40d6c82c03efb4aee/pizza+margherita+%28tomato%2C+basil%2C+and+mozzarella+pizza%29" alt="pizza">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/7cf/7cfc43d9b22c3390f374ce83adb2ea48.jpg" />
                                 </Card.Link>
@@ -63,7 +63,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="_blank" href="https://www.edamam.com/recipe/mediterranean-potato-salad-f142ed9eac72b9379968443ba0396777/mediterranean+potato+salad" alt="potato salad">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/3f3/3f3c1559b9743c89af4d3b71e668d178.jpg" />
                                 </Card.Link>
@@ -86,7 +86,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                             <Card.Link target="_blank" href="https://www.edamam.com/recipe/steak-teriyaki-4d0335d34d2ed7ce31df104b8bcb2df1/steak+teriyaki">
                                 <Card.Img variant="top" src="https://www.edamam.com/web-img/fb0/fb02d0f4a6ccbdd9c013294b42e0ea07.jpg" alt="steak teriyaki"/>
                             </Card.Link>
@@ -111,7 +111,7 @@ export default function Favorites(){
                 <Row>
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="_blank" href="https://www.edamam.com/recipe/grilled-shrimp-ebf300e6d128ed1b99240d1c9dd54400/grilled+shrimp">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/e14/e14f119b698baa552ce7f0e033561a83.jpg" alt="shrimp" />
                                 </Card.Link>
@@ -134,7 +134,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="_blank" href="https://www.edamam.com/recipe/vegetable-sushi-e570b996761c30cdfa1bebbf747a1182/sushi">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/f42/f4240b74d0fc3ce87d59d2ea84baedef.jpg" alt="sushi" />
                                 </Card.Link>
@@ -158,7 +158,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="href" href="https://www.edamam.com/recipe/vietnamese-sugar-steak-90101bbc817bd554bba0e759b8faea96/vietnamese+sugar+steak">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/0ce/0ceb02a442b8a784fdf2cb37c5a4bce2.jpg" alt="sugar steak" />
                                 </Card.Link>
@@ -181,7 +181,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                             <Card.Link target="_blank" href="https://www.edamam.com/recipe/pad-thai-86fb91db1dc04ebd4cd2629490d6b59f/pad+thai">
                                 <Card.Img variant="top" src="https://www.edamam.com/web-img/db4/db4f9cedfec42354083279d2934f6ab3.jpg" alt="pad thai" />
                             </Card.Link>
@@ -206,7 +206,7 @@ export default function Favorites(){
                 <Row>
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="_blank" href="https://www.edamam.com/recipe/strawberry-refrigerator-cake-980c7b85c8f97bbdb3bf5a34e4f34def/strawberry+refrigerator+cake">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/faa/faafa49ee8f0663470b6af9697bef468.jpg" alt="cake" />
                                 </Card.Link>
@@ -229,7 +229,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="_blank" href="http://www.edamam.com/recipe/red-pozole-a624b984b86f80dde0f91aaf624e8a66/pozole">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/88d/88db30ce0bbb1665372fa3b95f3dc165.jpg" alt="pozole" />
                                 </Card.Link>
@@ -252,7 +252,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="_blank" href="http://www.edamam.com/recipe/strawberry-cheesecake-parfaits-02058093a13f04e97575b993dee80923/cheesecake">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/d4c/d4c3a4f1db4e8c413301ae1f324cf32a.jpg" alt="cheesecake" />
                                 </Card.Link>
@@ -275,7 +275,7 @@ export default function Favorites(){
 
                     <Col>
                         <div>
-                            <Card className="home-card" style={{ width: '18rem' }}>
+                            <Card className="home-card">
                                 <Card.Link target="_blank" href="http://www.edamam.com/recipe/oven-roasted-bbq-chicken-thighs-deb32477acd2ad8c18e6a74df29fd153/bbq">
                                     <Card.Img variant="top" src="https://www.edamam.com/web-img/803/8035a1729b7d706f2731611af2a5ec5f.jpg" alt="chicken" />
                                 </Card.Link>

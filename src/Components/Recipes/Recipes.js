@@ -7,7 +7,7 @@ export default function Recipes(props){
     const recipeList = props.recipes.hits.map((card, i) => {
         return (
             <div key={i} style={{flex: "22%"}}>
-                <Card className="recipe-search" style={{ width: "18rem"}}>
+                <Card className="recipe-search">
                     <Card.Link target="_blank" href={card.recipe.shareAs}>
                         <Card.Img variant="top" alt="Food Image" src={card.recipe.image} />
                     </Card.Link>
