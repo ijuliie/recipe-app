@@ -6,6 +6,10 @@
         margin-right: 40px;
     }
 
+    .home-container {
+        margin-right: 4%;
+    }
+
     .hungry-title {
         padding-left: 9%;
     }
@@ -17,8 +21,8 @@
     }
 
     .home-container {
-        margin-right: 6%;
         margin-left: 4%;
+        margin-right: 6%;
     }
 
     .hungry-title {

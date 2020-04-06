@@ -15,7 +15,6 @@ export default function Recipes(props){
                         <Card.Title>
                                 {card.recipe.label}
                         </Card.Title>
-                        <Card.Text>{card.recipe.mealType}</Card.Text>
                         <ul>
                             <li>{card.recipe.ingredientLines[0]}</li>
                             <li>{card.recipe.ingredientLines[1]}</li>
