@@ -1,6 +1,6 @@
 ## Recipes
 
-https://ijuliie.github.io/recipe-app/
+https://determined-neumann-797e84.netlify.app/
 
 ### Overview
 
