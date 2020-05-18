@@ -1,8 +1,8 @@
 # Project Overview
 
 ## Project Links
+https://determined-neumann-797e84.netlify.app/
 
-- https://github.com/ijuliie/recipe-app
 - [add your deployment link]()
 
 ## Project Description
