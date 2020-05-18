@@ -12,7 +12,7 @@ export default function Header(){
                     (
                         <Navbar fixed="top" expand="lg" variant="light" bg="light" style={{height: "50px"}}>
                             <Container>
-                                <NavLink to="/recipe-app">Home</NavLink>
+                                <NavLink to="/">Home</NavLink>
                                 <NavLink to="/search">Search Recipe</NavLink>
                             </Container>
                         </Navbar>
@@ -20,7 +20,7 @@ export default function Header(){
                     (
                         <Navbar fixed="bottom" expand="lg" variant="light" bg="light">
                             <Container>
-                                <NavLink to="/recipe-app">Home</NavLink>
+                                <NavLink to="/">Home</NavLink>
                                 <NavLink to="/search">Search Recipe</NavLink>
                             </Container>
                         </Navbar>
