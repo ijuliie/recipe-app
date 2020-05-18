@@ -2,7 +2,7 @@
 
 ## Project Links
 
-- https://github.com/ijuliie/react-project
+- https://github.com/ijuliie/recipe-app
 - [add your deployment link]()
 
 ## Project Description
