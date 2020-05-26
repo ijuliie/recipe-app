@@ -14,6 +14,7 @@ export default function Header(){
                             <Container>
                                 <NavLink to="/">Home</NavLink>
                                 <NavLink to="/search">Search Recipe</NavLink>
+                                <NavLink to="/register">Register</NavLink>
                             </Container>
                         </Navbar>
                     ) : 
@@ -22,6 +23,8 @@ export default function Header(){
                             <Container>
                                 <NavLink to="/">Home</NavLink>
                                 <NavLink to="/search">Search Recipe</NavLink>
+                                <NavLink to="/register">Register</NavLink>
+                                <NavLink to="/login">Login</NavLink>
                             </Container>
                         </Navbar>
                     )
