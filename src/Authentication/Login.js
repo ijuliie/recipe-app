@@ -5,14 +5,13 @@ import { userLogin } from "../Services/api-helper"
 
 export default function Login(){
     const recipeContext = useContext(RecipeContext)
-    // console.log(recipeContext)
     const [login, setLogin] = useState({
         username: "",
         password: ""
     })
 
     console.log(recipeContext.user)
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         await userLogin(login)

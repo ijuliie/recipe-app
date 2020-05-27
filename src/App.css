@@ -11,6 +11,15 @@ a {
   color: rgb(240,128,128);
 }
 
+.card {
+  border-radius: 20px;
+}
+
+.card-img, .card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 .card-title {
   font-weight: 700;
   color: rgb(240,128,128);
