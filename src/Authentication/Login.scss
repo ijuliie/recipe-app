@@ -1,0 +1,26 @@
+@mixin block {
+    display: block;
+}
+
+.login {
+    .label {
+        text-align: center;
+    }
+
+    @include block();
+    margin: 40% auto;
+
+    .username, .password {
+        @include block();
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .login-submit {
+        @include block();
+        margin: 2% auto;
+        padding: .375rem .75rem;
+        border-radius: .25rem;
+        border-color: rgb(248, 249, 250);
+    }
+}

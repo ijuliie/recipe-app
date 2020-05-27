@@ -2,8 +2,12 @@ import React, { useState, useContext } from "react"
 import { Form } from "react-bootstrap"
 import { RecipeContext } from "../App"
 import { userLogin } from "../Services/api-helper"
+import { useMediaQuery } from "react-responsive"
+import "./Login.scss"
+import "../styles.css"
 
 export default function Login(){
+    const isDesktop = useMediaQuery({query: "(min-device-width: 1020px)"})
     const recipeContext = useContext(RecipeContext)
     const [login, setLogin] = useState({
         username: "",
@@ -30,28 +34,71 @@ export default function Login(){
      }
 
     return (
-        <Form onSubmit={ handleSubmit }>
-        
-        <div className='label'>
-            <label>Username:</label>
-        </div>
-        <Form.Control 
-            name="username"
-            value={ login.username } 
-            onChange={ handleChange } 
-         />
+        <>
+            {
+                isDesktop ? 
+                    <Form style={{margin: "17% auto"}} className="login" onSubmit={ handleSubmit }>
+                    
+                        <div className='label'>
+                            <label>Username:</label>
+                        </div>
+                        <Form.Control 
+                            className="username"
+                            name="username"
+                            value={ login.username } 
+                            onChange={ handleChange } 
+                        />
 
-        <div className='label'>
-            <label>Password:</label>
-        </div>
-        <Form.Control  
-            type='password'
-            name="password" 
-            value={ login.password } 
-            onChange={ handleChange } 
-        />
+                        <div className='label'>
+                            <label>Password:</label>
+                        </div>
+                        <Form.Control  
+                            className="password"
+                            type='password'
+                            name="password" 
+                            value={ login.password } 
+                            onChange={ handleChange } 
+                        />
 
-        <input className='login-submit' type="Submit" value="Login" />
-    </Form>
+                        <input className='login-submit' type="Submit" value="Login" />
+
+                        <div style={{textAlign: "center"}}>
+                            <p>Don't have an account?</p>
+                            <a href="/register">Click here to make an account!</a>
+                        </div>
+                    </Form> :
+                    
+                    <Form className="login" onSubmit={ handleSubmit }>
+
+                        <div className='label'>
+                            <label>Username:</label>
+                        </div>
+                        <Form.Control 
+                            className="username"
+                            name="username"
+                            value={ login.username } 
+                            onChange={ handleChange } 
+                        />
+
+                        <div className='label'>
+                            <label>Password:</label>
+                        </div>
+                        <Form.Control  
+                            className="password"
+                            type='password'
+                            name="password" 
+                            value={ login.password } 
+                            onChange={ handleChange } 
+                        />
+
+                        <input className='login-submit' type="Submit" value="Login" />
+
+                        <div style={{textAlign: "center"}}>
+                            <p>Don't have an account?</p>
+                            <a href="/register">Click here to make an account!</a>
+                        </div>
+                    </Form>
+            }
+        </>
     )
 }
