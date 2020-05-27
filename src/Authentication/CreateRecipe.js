@@ -17,7 +17,8 @@ export default function CreateRecipe(props){
         await createUserRecipe(newRecipe, recipeContext.user.token)
         .then(response => {
             if(response.status === 201){
-                recipeContext.recipes.push(newRecipe)
+                recipeContext.newRecipes.push(newRecipe)
+                console.log(recipeContext.newRecipes)
                 alert("recipe created")
             } else {
                 alert("failed")
