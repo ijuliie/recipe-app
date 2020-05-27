@@ -2,9 +2,11 @@ import React from "react"
 import { Navbar, Container } from "react-bootstrap"
 import {useMediaQuery} from "react-responsive"
 import { NavLink } from "react-router-dom"
+import "../Components/Header.scss"
 
-export default function Header(){
+export default function Header({handleChange, handleSearch, foodType}){
     const isDesktop = useMediaQuery({query: "(min-device-width: 1080px)"})
+    
     return (
         <>
             {
@@ -12,16 +14,48 @@ export default function Header(){
                     (
                         <Navbar fixed="top" expand="lg" variant="light" bg="light" style={{height: "50px"}}>
                             <Container>
-                                <NavLink to="/">Home</NavLink>
-                                <NavLink to="/search">Search Recipe</NavLink>
+
+                                <div>        
+                                    <form onSubmit={handleSearch}>
+                                    <label className="label">Find a recipe:</label> 
+                                        <input
+                                        className="input"
+                                        type="text"
+                                        value={foodType}
+                                        onChange={handleChange} 
+                                        />
+                                        <input
+                                        className="search"
+                                        type='submit'
+                                        value='Search' 
+                                        />
+                                    </form>
+                                </div>
+
+                                <NavLink to="/login">Login</NavLink>
+
                             </Container>
                         </Navbar>
                     ) : 
                     (
                         <Navbar fixed="bottom" expand="lg" variant="light" bg="light">
                             <Container>
-                                <NavLink to="/">Home</NavLink>
-                                <NavLink to="/search">Search Recipe</NavLink>
+                                <div>        
+                                    <form onSubmit={handleSearch}>
+                                    <label className="label" htmlFor="Enter Recipe">Enter Recipe:</label>
+                                        <input
+                                        className="input"
+                                        type="text"
+                                        value={foodType}
+                                        onChange={handleChange} 
+                                        />
+                                        <input
+                                        className="search"
+                                        type='submit'
+                                        value='Search' 
+                                        />
+                                    </form>
+                                </div>
                             </Container>
                         </Navbar>
                     )
