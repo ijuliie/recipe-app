@@ -1,10 +1,32 @@
-import React from "react"
+import React, { useState, useContext, useEffect } from "react"
+import { getUserRecipes } from "../../Services/api-helper"
+import { RecipeContext } from "../../App"
 import { Card } from "react-bootstrap"
 import "../../styles.css"
 import "./Recipes.css"
 
-export default function Recipes(props){
-    const recipeList = props.recipes.hits.map((card, i) => {
+export default function Recipes({recipes}){
+    const recipeContext = useContext(RecipeContext)
+    console.log(recipeContext)
+
+    useEffect(() => {
+        const getRecipes = async () => {
+            const res = await getUserRecipes(recipeContext.user.token)
+            recipeContext.setUserRecipes(res.data)
+        }
+        getRecipes()
+    }, [recipeContext.user.token])
+
+    const handleClick = index => {
+        const faveRecipe = [...recipes.hits]
+        // console.log("FAVERECIPE", faveRecipe)
+        const recipeIndex = faveRecipe.splice(index, 1)
+        // console.log("INDEX", recipeIndex)
+        recipeContext.favorites.push(recipeIndex)
+        console.log("FAVORITES", recipeContext.favorites)
+    }
+
+    const recipeList = recipes.hits.map((card, i) => {
         return (
             <div key={i} style={{flex: "22%"}}>
                 <Card className="recipe-search">
@@ -28,11 +50,13 @@ export default function Recipes(props){
                         <Card.Link target="_blank" href={card.recipe.shareAs}>
                             more...
                         </Card.Link>
+                        <Card.Text onClick={handleClick}>-</Card.Text>
                     </Card.Body>
                 </Card>
             </div>
         )
     })
+
     return (
         <>
             <div className="recipe-list">
