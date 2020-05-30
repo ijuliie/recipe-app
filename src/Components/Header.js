@@ -32,7 +32,7 @@ export default function Header({handleChange, handleSearch, foodType}){
                                     </form>
                                 </div>
 
-                                <NavLink to="/login">Login</NavLink>
+                                <NavLink id="login" to="/login">Login</NavLink>
 
                             </Container>
                         </Navbar>
