@@ -20,10 +20,10 @@ export default function Register(props){
         e.preventDefault()
         await registerNewUser(newUser).then(response => {
             if(response.status === 201){
-                // console.log(response.status)
                 recipeContext.setUser(response.data)
-                // console.log(recipeContext.user)
                 recipeContext.setLoggedIn(true)
+                props.history.push("/")
+                document.getElementById("login").innerHTML = "Successfully registered!"
             }
         })
     }
