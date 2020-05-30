@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive"
 import "./Login.scss"
 import "../styles.css"
 
-export default function Login(){
+export default function Login(props){
     const isDesktop = useMediaQuery({query: "(min-device-width: 1020px)"})
     const recipeContext = useContext(RecipeContext)
     const [login, setLogin] = useState({
@@ -21,9 +21,13 @@ export default function Login(){
         await userLogin(login)
         .then(response => {
             if(response.status === 200){
-                console.log(response.status)
                 recipeContext.setUser(response.data)
                 recipeContext.setLoggedIn(true)
+                props.history.push("/")
+                document.getElementById("login").innerHTML = "Successfully logged in!"
+            } else {
+                console.log("error")
+                alert("A user with that username or password was not found. Please try again.")
             }
         })
     }
@@ -90,6 +94,8 @@ export default function Login(){
                             value={ login.password } 
                             onChange={ handleChange } 
                         />
+
+                        <p className="password-error"></p>
 
                         <input className='login-submit' type="Submit" value="Login" />
 
