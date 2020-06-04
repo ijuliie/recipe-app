@@ -10,12 +10,12 @@ export default function Home(){
     const isMobile = useMediaQuery({query: "(min-device-width: 500px)"})
     const [recipes, setRecipes] = useState({})
     const [foodType, setFoodType] = useState("")
-    const [search, setSearch] = useState("chocolate")
+    const [search, setSearch] = useState("steak")
   
     useEffect(() => {
       const callApi = async () => {
-        const apiKey = `4ff13b14bc14e2d5451fba71d252f5fc`
-        const appId = `bd9d80c8` 
+        const apiKey = `1165067289152cf22ecf26a6bb0bcd41`
+        const appId = `6227bd9a` 
         const recipeUrl = `https://api.edamam.com/search?q=${search}&app_id=${appId}&app_key=${apiKey}&from=0&to=8`
         const res = await fetch(recipeUrl)
         const json = await res.json()
@@ -24,7 +24,7 @@ export default function Home(){
       callApi()
     }, [search])
   
-    const handleSearch = (e) => {
+    const handleSubmit = (e) => {
       e.preventDefault()
       setSearch(foodType)
       setFoodType("")
@@ -36,7 +36,7 @@ export default function Home(){
 
     return (
         <>
-            <Header recipes={recipes} foodType={foodType} handleSubmit={handleSearch} handleChange={handleChange} />
+            <Header recipes={recipes} foodType={foodType} handleSubmit={handleSubmit} handleChange={handleChange} />
             {!isMobile ? " " : <Images />}
             <h1 className="hungry-title">Hungry?</h1>
             <hr />

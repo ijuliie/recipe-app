@@ -4,7 +4,7 @@ import {useMediaQuery} from "react-responsive"
 import { NavLink } from "react-router-dom"
 import "../Components/Header.scss"
 
-export default function Header({handleChange, handleSearch, foodType}){
+export default function Header({handleChange, handleSubmit, foodType}){
     const isDesktop = useMediaQuery({query: "(min-device-width: 1080px)"})
     
     return (
@@ -16,7 +16,7 @@ export default function Header({handleChange, handleSearch, foodType}){
                             <Container>
 
                                 <div>        
-                                    <form onSubmit={handleSearch}>
+                                    <form onSubmit={handleSubmit}>
                                     <label className="label">Find a recipe:</label> 
                                         <input
                                         className="input"
@@ -31,9 +31,6 @@ export default function Header({handleChange, handleSearch, foodType}){
                                         />
                                     </form>
                                 </div>
-
-                                <NavLink id="login" to="/login">Login</NavLink>
-
                             </Container>
                         </Navbar>
                     ) : 
@@ -41,7 +38,7 @@ export default function Header({handleChange, handleSearch, foodType}){
                         <Navbar fixed="bottom" expand="lg" variant="light" bg="light">
                             <Container>
                                 <div>        
-                                    <form onSubmit={handleSearch}>
+                                    <form onSubmit={handleSubmit}>
                                     <label className="label" htmlFor="Enter Recipe">Enter Recipe:</label>
                                         <input
                                         className="input"

@@ -1,5 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
-import { getUserRecipes } from "../../Services/api-helper"
+import React, { useContext } from "react"
 import { RecipeContext } from "../../App"
 import { Card } from "react-bootstrap"
 import "../../styles.css"
@@ -8,14 +7,6 @@ import "./Recipes.css"
 export default function Recipes({recipes}){
     const recipeContext = useContext(RecipeContext)
     console.log(recipeContext)
-
-    useEffect(() => {
-        const getRecipes = async () => {
-            const res = await getUserRecipes(recipeContext.user.token)
-            recipeContext.setUserRecipes(res.data)
-        }
-        getRecipes()
-    }, [recipeContext.user.token])
 
     const handleClick = index => {
         const faveRecipe = [...recipes.hits]
