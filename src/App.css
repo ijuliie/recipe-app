@@ -1,35 +1,7 @@
-body {
-  background: linear-gradient(90deg, rgba(242,233,233,1) 0%, rgba(240,128,128,1) 50%, rgba(246,213,213,1) 100%);
-}
-
 .App {
   font-family: "Comic Neue", cursive;
+  letter-spacing: 1.5px;
 } 
-
-a {
-  /* font-size: 20px; */
-  color: rgb(240,128,128);
-}
-
-.card {
-  border-radius: 20px;
-}
-
-.card-img, .card-img-top {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.card-title {
-  font-weight: 700;
-  color: rgb(240,128,128);
-}
-
-a:hover {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgb(240,128,128);
-}
 
 .carousel-indicators {
   visibility: hidden;
