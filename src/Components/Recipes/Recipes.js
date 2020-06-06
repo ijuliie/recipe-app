@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { Card, Image } from "react-bootstrap"
-import RecipeDetails from "../RecipeDetails/RecipeDetails"
+import { Card, Image, Button } from "react-bootstrap"
 import "../../styles.css"
 import "./Recipes.scss"
 
@@ -17,20 +16,9 @@ export default function Recipes({recipes}){
                         <Card.Title>
                                 {card.recipe.label}
                         </Card.Title>
-                        <Link to={`/recipe/${card.recipe.label}`}>ingredients</Link>
-                        {/* <ul>
-                            <li>{card.recipe.ingredientLines[0]}</li>
-                            <li>{card.recipe.ingredientLines[1]}</li>
-                            {
-                                card.recipe.ingredientLines[2] ? 
-                                card.recipe.ingredientLines[2].length < 20 ? (<li>{card.recipe.ingredientLines[2]}</li> ) : " "
-                                : 
-                                " "
-                            }
-                        </ul> */}
-                        {/* <Card.Link target="_blank" href={card.recipe.shareAs}>
-                            more...
-                        </Card.Link> */}
+                        <Button variant="link">
+                            <Link to={`/${card.recipe.label}`}>Ingredients</Link>
+                        </Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -40,6 +28,7 @@ export default function Recipes({recipes}){
     return (
         <>
             <div className="recipe-list">
+                <hr />
                 {recipeList}
             </div>
         </>
