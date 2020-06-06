@@ -1,47 +1,24 @@
-import React, { useContext } from "react"
-import { RecipeContext } from "../../App"
-import { Card } from "react-bootstrap"
+import React from "react"
+import { Link } from "react-router-dom"
+import { Card, Image, Button } from "react-bootstrap"
 import "../../styles.css"
-import "./Recipes.css"
+import "./Recipes.scss"
 
 export default function Recipes({recipes}){
-    const recipeContext = useContext(RecipeContext)
-    console.log(recipeContext)
-
-    const handleClick = index => {
-        const faveRecipe = [...recipes.hits]
-        // console.log("FAVERECIPE", faveRecipe)
-        const recipeIndex = faveRecipe.splice(index, 1)
-        // console.log("INDEX", recipeIndex)
-        recipeContext.favorites.push(recipeIndex)
-        console.log("FAVORITES", recipeContext.favorites)
-    }
-
     const recipeList = recipes.hits.map((card, i) => {
         return (
-            <div key={i} style={{flex: "22%"}}>
+            <div key={i} style={{flex: "50%"}}>
                 <Card className="recipe-search">
                     <Card.Link target="_blank" href={card.recipe.shareAs}>
-                        <Card.Img variant="top" alt="Food Image" src={card.recipe.image} />
+                        <Image variant="top" alt="Food Image" src={card.recipe.image} roundedCircle />
                     </Card.Link>
                     <Card.Body>
                         <Card.Title>
                                 {card.recipe.label}
                         </Card.Title>
-                        <ul>
-                            <li>{card.recipe.ingredientLines[0]}</li>
-                            <li>{card.recipe.ingredientLines[1]}</li>
-                            {
-                                card.recipe.ingredientLines[2] ? 
-                                card.recipe.ingredientLines[2].length < 20 ? (<li>{card.recipe.ingredientLines[2]}</li> ) : " "
-                                : 
-                                " "
-                            }
-                        </ul>
-                        <Card.Link target="_blank" href={card.recipe.shareAs}>
-                            more...
-                        </Card.Link>
-                        <Card.Text onClick={handleClick}>-</Card.Text>
+                        <Button variant="link">
+                            <Link to={`/${card.recipe.label}`}>Ingredients</Link>
+                        </Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -51,6 +28,7 @@ export default function Recipes({recipes}){
     return (
         <>
             <div className="recipe-list">
+                <hr />
                 {recipeList}
             </div>
         </>
