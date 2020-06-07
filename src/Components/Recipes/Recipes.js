@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Card, Image, Button } from "react-bootstrap"
-import "../../styles.css"
 import "./Recipes.scss"
 
 export default function Recipes({recipes}){
@@ -28,7 +27,6 @@ export default function Recipes({recipes}){
     return (
         <>
             <div className="recipe-list">
-                <hr />
                 {recipeList}
             </div>
         </>

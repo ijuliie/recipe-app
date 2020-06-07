@@ -1,6 +1,8 @@
 .App {
   font-family: "Comic Neue", cursive;
   letter-spacing: 1.5px;
+  overflow-x: hidden;
+  scroll-padding: 0!important;
 } 
 
 .carousel-indicators {

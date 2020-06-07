@@ -1,7 +1,36 @@
+@media(min-width: 300px){
+    .recipe-search {
+        width: 21.5rem;
+    }
+}
+
 @media(min-width: 768px){
-    .recipe-list {
+    .navbar-brand {
+        font-size: 3vh;
+    }
+
+    div > .recipe-list {
+        margin-top: 10%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .recipe-search {
+        width: 23rem;;
+    }
+}
+
+@media(min-width: 1020px){
+    .navbar-brand {
+        font-size: 4vh;
+    }
+
+    div > .recipe-list {
+        margin-top: 5%;
+    }
+
+    .recipe-search {
+        width: 29rem;
     }
 }
