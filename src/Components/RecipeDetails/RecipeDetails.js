@@ -26,16 +26,23 @@ export default function RecipeDetails({match}){
                 details.hits ?
                 details.hits.map((detail, i) => {
                     return (
-                      <>
-                      <h5>{detail.recipe.label}</h5>
-                      {
-                        detail.recipe.ingredientLines.map((ingredient, i) => {
-                            return (
-                                <li>{ingredient}</li>
-                            )
-                        })
-                        }
-                      </>
+                      <div key={i}>
+                        <div>
+                            <img src={detail.recipe.image} />
+                        </div>
+                        <div>
+                            <h5>{detail.recipe.label}</h5>
+                            <p className="calories">Calories: {Math.floor(detail.recipe.calories)}</p>
+                            {
+                                detail.recipe.ingredientLines.map((ingredient, i) => {
+                                    return (
+                                        <li key={i}>{ingredient}</li>
+                                    )
+                                })
+                            }
+                            <a href={detail.recipe.url}>Click here for instructions</a>
+                        </div>
+                      </div>
                     )
                 }) 
                 : ""

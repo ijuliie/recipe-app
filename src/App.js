@@ -9,7 +9,7 @@ import "./App.css"
 export default function App() {
   const [recipes, setRecipes] = useState({})
   const [foodType, setFoodType] = useState("")
-  const [search, setSearch] = useState("steak")
+  const [search, setSearch] = useState("dessert")
 
   useLayoutEffect(() => {
     const callApi = async () => {
