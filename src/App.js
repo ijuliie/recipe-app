@@ -18,7 +18,6 @@ export default function App() {
       const recipeUrl = `https://api.edamam.com/search?q=${search}&app_id=${appId}&app_key=${apiKey}&from=0&to=8`
       const res = await fetch(recipeUrl)
       const json = await res.json()
-      console.log(json)
       setRecipes(json)
     }
     callApi()

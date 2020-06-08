@@ -1,6 +1,6 @@
 import React from "react"
 import { useMediaQuery } from "react-responsive"
-import { Navbar, Container, NavbarBrand } from "react-bootstrap"
+import { NavLink, Navbar, Container, NavbarBrand } from "react-bootstrap"
 import "../Components/Header.scss"
 import "../styles.css"
 
@@ -13,7 +13,7 @@ export default function Header({handleChange, handleSubmit, foodType}){
             isTablet ?
             <Navbar fixed="top" expand="lg" variant="light" style={{height: "70px"}}>
                 <Container>
-                    <NavbarBrand>Recipes</NavbarBrand>
+                    <NavbarBrand href="/">Recipes</NavbarBrand>
                     <div>
                         <form onSubmit={handleSubmit}>
                             <input
@@ -31,7 +31,7 @@ export default function Header({handleChange, handleSubmit, foodType}){
             </Navbar> : 
             <Navbar fixed="top" expand="lg" variant="light" style={{height: "60px"}}>
                 <Container>
-                    <NavbarBrand>Recipes</NavbarBrand>
+                    <NavbarBrand href="/">Recipes</NavbarBrand>
                     <div>
                         <form onSubmit={handleSubmit}>
                             <input

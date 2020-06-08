@@ -2,7 +2,6 @@ import React, { useState, useLayoutEffect } from "react"
 import "./RecipeDetails.scss"
 
 export default function RecipeDetails({match}){
-    // console.log(match)
     const [details, setDetails] = useState([])
 
     useLayoutEffect(() => {
@@ -12,13 +11,10 @@ export default function RecipeDetails({match}){
             const recipeUrl = `https://api.edamam.com/search?q=${match.params.ingredients}&app_id=${appId}&app_key=${apiKey}&from=0&to=1`
             const res = await fetch(recipeUrl)
             const json = await res.json()
-            //   console.log(json)
             setDetails(json)
             }
         callApi()
       }, [match.params.ingredients])
-
-      console.log(details)
 
     return (
         <div className="ingredients-container">
