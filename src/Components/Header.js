@@ -31,7 +31,7 @@ export default function Header({handleChange, handleSubmit, foodType}){
             </Navbar> : 
             <Navbar fixed="top" expand="lg" variant="light" style={{height: "60px"}}>
                 <Container>
-                    <NavbarBrand href="/">Recipes</NavbarBrand>
+                    <NavbarBrand href="/">Recipeze</NavbarBrand>
                     <div>
                         <form onSubmit={handleSubmit}>
                             <input
