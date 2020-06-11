@@ -13,7 +13,7 @@ export default function Header({handleChange, handleSubmit, foodType}){
             isTablet ?
             <Navbar fixed="top" expand="lg" variant="light" style={{height: "70px"}}>
                 <Container>
-                    <NavbarBrand href="/">Recipes</NavbarBrand>
+                    <NavbarBrand href="/">Recipeze</NavbarBrand>
                     <div>
                         <form onSubmit={handleSubmit}>
                             <input
