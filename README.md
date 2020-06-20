@@ -1,6 +1,6 @@
-## Recipes
+## Recipeze
 
-https://determined-neumann-797e84.netlify.app/
+https://recipeze.netlify.app/
 
 ### Overview
 
