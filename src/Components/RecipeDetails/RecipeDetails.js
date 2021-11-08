@@ -1,10 +1,11 @@
-import React, { useState, useLayoutEffect } from "react"
+import React, { useState, useEffect } from "react"
+import { Spinner } from "react-bootstrap"
 import "./RecipeDetails.scss"
 
 export default function RecipeDetails({match}){
     const [details, setDetails] = useState([])
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const callApi = async () => {
             const apiKey = `1165067289152cf22ecf26a6bb0bcd41`
             const appId = `6227bd9a` 
@@ -24,7 +25,7 @@ export default function RecipeDetails({match}){
                     return (
                       <div key={i}>
                         <div>
-                            <img src={detail.recipe.image} />
+                            <img alt={detail.recipe.label} src={detail.recipe.image} />
                         </div>
                         <div>
                             <h5>{detail.recipe.label}</h5>
@@ -41,7 +42,7 @@ export default function RecipeDetails({match}){
                       </div>
                     )
                 }) 
-                : ""
+                : <div style={{ textAlign: 'center' }}><Spinner animation='border' /></div>
             }
         </div>
     )

@@ -4,7 +4,7 @@ import { Card, Image, Button } from "react-bootstrap"
 import "./Recipes.scss"
 
 export default function Recipes({recipes}){
-    const recipeList = recipes.hits.map((card, i) => {
+    const recipeList = recipes.map((card, i) => {
         return (
             <div key={i} style={{flex: "50%"}}>
                 <Card className="recipe-search">

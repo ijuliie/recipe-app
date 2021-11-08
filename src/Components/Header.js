@@ -1,6 +1,6 @@
 import React from "react"
 import { useMediaQuery } from "react-responsive"
-import { NavLink, Navbar, Container, NavbarBrand } from "react-bootstrap"
+import { Navbar, Container, NavbarBrand } from "react-bootstrap"
 import "../Components/Header.scss"
 import "../styles.css"
 
