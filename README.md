@@ -39,8 +39,8 @@ const [search, setSearch] = useState("")
   
     useEffect(() => {
       const callApi = async () => {
-        const apiKey = `4ff13b14bc14e2d5451fba71d252f5fc`
-        const appId = `bd9d80c8` 
+        const apiKey = ``
+        const appId = `` 
         const recipeUrl = `https://api.edamam.com/search?q=${search}&app_id=${appId}&app_key=${apiKey}`
         const res = await fetch(recipeUrl)
         const json = await res.json()
