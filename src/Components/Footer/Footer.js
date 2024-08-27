@@ -6,7 +6,7 @@ export default function Footer(){
         <>
             <footer>
                 <hr />
-                © 2020
+                © {new Date().getFullYear()}
             </footer>
         </>
     )
